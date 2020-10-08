@@ -1,7 +1,7 @@
 import React from "react"
 //import  About from "./components/about/about"
 import App from "./App"
-import Home from './pages/Home/home'
+
 import {
   BrowserRouter as Router,
   Route,
@@ -11,8 +11,8 @@ import {
 const Routes = () => {
   return (
     <Router>
-       <Route exact path="/" component={App} />
-       <Route path="/about" component={About} />   
+     <Route exact path="/" component={App} />
+       {/*  <Route path="/about" component={About} />   
        <Route path="/experience" component={Experience} /> 
        <Route path="/education" component={Education} />   
        <Route path="/skills" component={Skills} /> 
@@ -20,7 +20,7 @@ const Routes = () => {
        <Route path="/projects" component={Projects} /> 
        <Route path="/certifications" component={Certifications} />   
        <Route path="/honorsAchievements" component={HonorsAchievements} /> 
-       <Route path="/extracurricular" component={Extracurricular} />   
+  <Route path="/extracurricular" component={Extracurricular} />   */}
     </Router>)
 }
 
