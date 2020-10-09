@@ -2,52 +2,37 @@ import React from 'react'
 
 function extraCurricular() {
     return (
-       
-      <section className="resume-section" id="awards">
-      <div className="resume-section-content">
-        <h2 className="mb-5">Awards &amp; Certifications</h2>
-        <ul className="fa-ul mb-0">
-          <li>
-            <span className="fa-li"><i className="fas fa-trophy text-warning" /></span>
-            Google Analytics Certified Developer
-          </li>
-          <li>
-            <span className="fa-li"><i className="fas fa-trophy text-warning" /></span>
-            Mobile Web Specialist - Google Certification
-          </li>
-          <li>
-            <span className="fa-li"><i className="fas fa-trophy text-warning" /></span>
-            1
-            <sup>st</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2009
-          </li>
-          <li>
-            <span className="fa-li"><i className="fas fa-trophy text-warning" /></span>
-            1
-            <sup>st</sup>
-            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-          </li>
-          <li>
-            <span className="fa-li"><i className="fas fa-trophy text-warning" /></span>
-            2
-            <sup>nd</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2008
-          </li>
-          <li>
-            <span className="fa-li"><i className="fas fa-trophy text-warning" /></span>
-            1
-            <sup>st</sup>
-            Place - James Buchanan High School - Hackathon 2006
-          </li>
-          <li>
-            <span className="fa-li"><i className="fas fa-trophy text-warning" /></span>
-            3
-            <sup>rd</sup>
-            Place - James Buchanan High School - Hackathon 2005
-          </li>
-        </ul>
+      
+      <div className="section" id="contact">
+      <div className="h4 text-center mb-4 title">Extra Curricular</div>
+        <div className="cc-contact-information" style={{backgroundImage: ''}}>
+          <div className="container">
+            <div className="cc-contact">
+              <div className="row">
+                <div className="col-md-9">
+                  <div className="card mb-0" data-aos="zoom-in">
+                    <div className="row">
+                      <div className="col-md-12">
+                        <div className="card-body">
+                        <ul>
+                           <li>Participant - Speed Programming Competition @ Coders Cup 2019</li>
+                           <li>Participant - Data Science Competition @ Developers’ Day 2019</li>
+                           <li>Member - Guest Relations Team Developers Day’18</li>
+                           <li>Member - Guest Relations Team GADITEK Developers Day’17</li>
+                           <li>Member - Event Management Team Intra FAST Declamation Contest 2017</li>
+                           <li>Member - Guest Relations and Event Management Team TEDxFAST 2016</li>
+                          <li>Member - Event Management Team The Grand Debate</li>
+                        </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
     )
 }
 

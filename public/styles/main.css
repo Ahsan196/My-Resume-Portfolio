@@ -7264,3 +7264,44 @@ a.credit {
 .section {
   padding-bottom: 0;
 }
+div.content {
+	clear: both;
+	padding:0;
+	margin:0;
+	overflow: hidden;
+	display:block;
+	padding-top:32px;
+}
+
+
+ul.skills {
+	margin:0;
+	padding:0;
+	float:right;
+	width:500px;
+	margin-left:40px;
+	margin-top:-6px;
+	list-style-type: none;
+	
+}
+
+ul.skills li {
+	margin:0;
+	padding:0;
+	float:left;
+	width:156px;
+	background-image:url(../images/bullet.gif);
+	background-repeat: no-repeat;
+	padding-left:10px;
+	background-position: 0 .5em;
+	margin-top:6px;
+}
+
+
+.entry {
+	width:720px;
+	display: block;
+	padding-top:55px;
+	clear: both;
+	margin-left:4px;
+}

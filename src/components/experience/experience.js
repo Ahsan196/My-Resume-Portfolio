@@ -32,7 +32,7 @@ function experience() {
               </div>
               <div className="col-md-9" data-aos="fade-left" data-aos-offset={50} data-aos-duration={500}>
                 <div className="card-body">
-                  <div className="h5">Teching Assistant</div>
+                  <div className="h5">Teaching Assistant</div>
                   <p>■ Helped course lecturer with grading of course work.</p>
                 </div>
               </div>

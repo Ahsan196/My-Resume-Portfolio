@@ -7,6 +7,9 @@ import Education from './components/education/education'
 import Experience from './components/experience/experience'
 import ExtraCurricular from './components/extraCurricular/extraCurricular'
 import HonorsAchievements from './components/honorsAchievements/honorsAchievements'
+import Certifications from './components/certifications/certifications'
+import Interests from './components/interests/interests'
+import Skills from './components/skills/skills'
 export default class App extends  Component{
   render(){
     return (
@@ -15,8 +18,11 @@ export default class App extends  Component{
         <About />
         <Education />
         <Experience />
-        <ExtraCurricular />
+        <Skills />
+        <Interests/>
+        <Certifications />     
         <HonorsAchievements />
+        <ExtraCurricular />
         
       </div>
     );

@@ -65,7 +65,7 @@ function education() {
                 <div className="card-body">
                   <div className="h5">SSC</div>
                   <p className="category">Dar ul Hijra National School, Medina Munawwarah, KSA</p>
-                  <h6>Core Subject</h6>
+                  <h6>Core Subjects</h6>
                   <ol>
                   ● Biology
                   ● Chemistry
