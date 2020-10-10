@@ -15,7 +15,7 @@ function skills() {
                 "Frameworks": ["ASP.NET MVC"],
                 "API Development": ["REST","SOAP"],
                 "Familiar With": ["Linux", "Django", "Node.js"],
-                "Quality Assurance Tools": ["Postman", "JDeodorant"]
+                "Quality Assurance Tools": ["Postman", "Insomnia", "JDeodorant"]
     };
     return (
         <div className="section" id="skill">

@@ -10,6 +10,7 @@ import HonorsAchievements from './components/honorsAchievements/honorsAchievemen
 import Certifications from './components/certifications/certifications'
 import Interests from './components/interests/interests'
 import Skills from './components/skills/skills'
+import Projects from './components/projects/projects'
 export default class App extends  Component{
   render(){
     return (
@@ -19,6 +20,7 @@ export default class App extends  Component{
         <Education />
         <Experience />
         <Skills />
+        <Projects />
         <Interests/>
         <Certifications />     
         <HonorsAchievements />
