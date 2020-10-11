@@ -1,39 +1,56 @@
 import React, { Component } from "react";
-import Carousel from "./crousel";
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
+} from "reactstrap";
 import axios from "axios";
 
-const Project = (props) => (
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <div class="row">
-        <div class="col-lg-10 col-md-9">
-          <p>{props.project.title}</p>
-          <p>{props.project.description}</p>
-        </div>
-      </div>
-    </div>
-    <div className="carousel-item">
-      <div class="row">
-        <div class="col-lg-10 col-md-9">
-          <p>{props.project.title}</p>
-          <p>{props.project.description}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
 export class projects extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { myProjects: [] };
+    this.state = {
+      myProjects: [],
+      activeIndex: 0,
+      animating: false,
+      projectsFetched: false,
+    };
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+    this.goToIndex = this.goToIndex.bind(this);
   }
+
+  next = () => {
+    if (this.state.animating) return;
+    const nextIndex =
+      this.state.activeIndex === this.state.myProjects.length - 1
+        ? 0
+        : this.state.activeIndex + 1;
+    this.setState({ activeIndex: nextIndex });
+  };
+
+  previous = () => {
+    if (this.state.animating) return;
+    const nextIndex =
+      this.state.activeIndex === 0
+        ? this.state.myProjects.length - 1
+        : this.state.activeIndex - 1;
+    this.setState({ activeIndex: nextIndex });
+  };
+
+  goToIndex = (newIndex) => {
+    if (this.state.animating) return;
+    this.setState({ activeIndex: newIndex });
+  };
 
   componentDidMount() {
     axios
       .get("http://localhost:5000/projects/")
       .then((response) => {
-        this.setState({ myProjects: response.data });
+        this.setState({ myProjects: response.data, projectsFetched: true });
       })
       .catch((error) => {
         console.log(error);
@@ -41,39 +58,60 @@ export class projects extends Component {
   }
 
   render() {
-    console.log(this.state.myProjects);
+    console.log("projects", this.state.myProjects);
+
     return (
       <div>
-        {
+        {this.state.projectsFetched === false ? null : (
           <div className="section" id="project">
-            <div className="container cc-reference">
-              <div className="h4 mb-4 text-center title">Projects</div>
-              <div className="card" data-aos="zoom-in">
-                <div
-                  className="carousel slide"
-                  id="cc-Indicators"
-                  data-ride="carousel"
-                >
-                  <ol className="carousel-indicators">
-                    <li
-                      className="active"
-                      data-target="#cc-Indicators"
-                      data-slide-to={0}
+            {console.log("inside projects", this.state.myProjects)}
+            <div className="h4 mb-4 text-center title">Projects</div>
+            <Carousel
+              className="h-10% p-5"
+              activeIndex={this.state.activeIndex}
+              next={this.next}
+              previous={this.previous}
+            >
+              <CarouselIndicators
+                items={this.state.myProjects}
+                activeIndex={this.state.activeIndex}
+                onClickHandler={this.goToIndex}
+              />
+              {/*{this.projectSlide()}*/}
+              {this.state.myProjects.map((project) => {
+                return (
+                  <CarouselItem
+                    onExiting={() => this.setState({ animating: true })}
+                    onExited={() => this.setState({ animating: false })}
+                    key={project.title}
+                  >
+                    <img
+                      className="w-60 h-10"
+                      src="./images/1.jpg"
+                      alt="First slide"
                     />
-                    <li data-target="#cc-Indicators" data-slide-to={1} />
-                    <li data-target="#cc-Indicators" data-slide-to={2} />
-                    <li data-target="#cc-Indicators" data-slide-to={3} />
-                    <li data-target="#cc-Indicators" data-slide-to={4} />
-                    <li data-target="#cc-Indicators" data-slide-to={5} />
-                  </ol>
-                  {this.state.myProjects.map((project) => {
-                    return <Project project={project} />;
-                  })}
-                </div>
-              </div>
-            </div>
+                    <CarouselCaption
+                      // className="text-danger"
+                      className="text-center"
+                      captionText={project.description}
+                      captionHeader={project.title}
+                    />
+                  </CarouselItem>
+                );
+              })}
+              <CarouselControl
+                direction="prev"
+                directionText="Previous"
+                onClickHandler={this.previous}
+              />
+              <CarouselControl
+                direction="next"
+                directionText="Next"
+                onClickHandler={this.next}
+              />
+            </Carousel>
           </div>
-        }
+        )}
       </div>
     );
   }
