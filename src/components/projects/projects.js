@@ -48,7 +48,7 @@ export class projects extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/projects/")
+      .get("/projects")
       .then((response) => {
         this.setState({ myProjects: response.data, projectsFetched: true });
       })
