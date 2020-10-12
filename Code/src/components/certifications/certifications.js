@@ -5,7 +5,7 @@ export default function certifications() {
     <div className="section" id="about">
       <div className="h4 text-center mb-4 title">Certifications</div>
       <div className="container">
-        <div className="card">
+        <div className="card w-75">
           <div className="row">
             <div className="col-lg-12 col-md-12">
               <div className="card-body">

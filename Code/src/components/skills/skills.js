@@ -56,8 +56,8 @@ function skills() {
   return (
     <div className="section" id="skill">
       <div className="container">
-        <div className="h4 text-center mb-4 title">Skills</div>
-        <Technical dict={dict} />
+        <div className="h3 text-center mb-4 title">Skills</div>
+        <Technical /> {/*dict={dict} */}
         <Soft />
       </div>
     </div>

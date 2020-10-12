@@ -7771,9 +7771,6 @@ Created using IcoMoon - icomoon.io
   overflow: hidden;
 }
 
-.cc-contact-information .cc-contact {
-  padding: 8% 0 8% 20%;
-}
 
 @media (max-width: 767px) {
   .cc-contact-information .cc-contact {
@@ -7846,4 +7843,7 @@ ul.skills li {
 
   display: block;
   /* Other styles here */
+}
+nav{
+  width: 100%;
 }

@@ -4,7 +4,7 @@ export class header extends Component {
   render() {
     return (
       <div>
-        <header>
+        <header className="w-100">
           <div className="profile-page sidebar-collapse">
             <nav
               className="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary"
@@ -14,6 +14,7 @@ export class header extends Component {
                 <div className="navbar-translate">
                   <a className="navbar-brand" href="#" rel="tooltip"></a>
                   <button
+                     style={{width:'150px',marginTop:'10px'}}
                     className="navbar-toggler navbar-toggler"
                     type="button"
                     data-toggle="collapse"

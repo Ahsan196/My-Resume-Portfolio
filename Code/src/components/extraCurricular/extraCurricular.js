@@ -8,8 +8,8 @@ function extraCurricular() {
         <div className="container">
           <div className="cc-contact">
             <div className="row">
-              <div className="col-md-9">
-                <div className="card mb-0" data-aos="zoom-in">
+              <div className="col-md-12">
+                <div className="card w-100" data-aos="zoom-in">
                   <div className="row">
                     <div className="col-md-12">
                       <div className="card-body">

@@ -65,9 +65,9 @@ export class projects extends Component {
         {this.state.projectsFetched === false ? null : (
           <div className="section" id="project">
             {console.log("inside projects", this.state.myProjects)}
-            <div className="h4 mb-4 text-center title">Projects</div>
+            <div className="h4 text-center title">Projects</div>
             <Carousel
-              className="h-10% p-5"
+              className=""
               activeIndex={this.state.activeIndex}
               next={this.next}
               previous={this.previous}
@@ -86,7 +86,7 @@ export class projects extends Component {
                     key={project.title}
                   >
                     <img
-                      className="w-60 h-10"
+                      className=""
                       src="./images/1.jpg"
                       alt="First slide"
                     />
