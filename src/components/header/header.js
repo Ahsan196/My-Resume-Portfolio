@@ -14,7 +14,7 @@ export class header extends Component {
                 <div className="navbar-translate">
                   <a className="navbar-brand" href="#" rel="tooltip"></a>
                   <button
-                     style={{width:'150px',marginTop:'10px'}}
+                    style={{ width: "150px", marginTop: "10px" }}
                     className="navbar-toggler navbar-toggler"
                     type="button"
                     data-toggle="collapse"

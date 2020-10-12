@@ -85,11 +85,7 @@ export class projects extends Component {
                     onExited={() => this.setState({ animating: false })}
                     key={project.title}
                   >
-                    <img
-                      className=""
-                      src="./images/1.jpg"
-                      alt="First slide"
-                    />
+                    <img className="" src="./images/1.jpg" alt="First slide" />
                     <CarouselCaption
                       // className="text-danger"
                       className="text-center"
